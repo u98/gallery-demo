@@ -17,7 +17,7 @@
     </paginate>
     <div class="row">
       <template v-for="item in images">
-        <div class="col-md-3">
+        <div class="col-md-4">
         <template v-for="image in item" v-key="image.id">
           <img :src="image.url" style="width: 100%; margin: 10px 5px;">
         </template>
@@ -54,7 +54,7 @@ export default {
             return (0.5 - Math.random())
           })
           e.data.forEach((item, index) => {
-            let chuck = Math.floor(index/9)
+            let chuck = Math.floor(index/12)
             if (!newArr[chuck]) {
               newArr[chuck] = []
             }
