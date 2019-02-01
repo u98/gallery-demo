@@ -4,7 +4,7 @@
     <div class="input-group">
       <input type="input" class="form-control" ref="inputGo">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button" @click="btnGoClick">Go!</button>
+        <button class="btn btn-default" type="button" @click="btnGoClick">Jump</button>
       </span>
     </div>
     <paginate v-if="'last_page' in data"
