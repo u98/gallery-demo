@@ -46,7 +46,7 @@ export default {
     },
     loadImage(page = 1) {
       this.images = []
-      fetch('http://ubuntu-uchinka.c9users.io:8081?page=' + page).then(e => {
+      fetch('https://ubuntu-uchinka.c9users.io:8081?page=' + page).then(e => {
         e.json().then(e => {
           this.data = e
           let newArr = []
