@@ -54,7 +54,7 @@ export default {
     },
     loadImage(page = 1) {
       this.images = []
-      fetch('https://matlon.ml/api/tumblr?page=' + page).then(e => {
+      fetch('https://ubuntu-uchinka.c9users.io:8081/api/tumblr?page=' + page).then(e => {
         e.json().then(e => {
           this.data = e
           let newArr = []
