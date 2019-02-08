@@ -24,6 +24,14 @@
         </div>
       </template>
     </div>
+    <paginate v-if="'last_page' in data"
+      :page-count="data.last_page"
+      :click-handler="functionName"
+      v-model="current"
+      :prev-text="'Prev'"
+      :next-text="'Next'"
+      :container-class="'pagination'">
+    </paginate>
   </div>
 </template>
 
@@ -46,7 +54,7 @@ export default {
     },
     loadImage(page = 1) {
       this.images = []
-      fetch('https://ubuntu-uchinka.c9users.io:8081?page=' + page).then(e => {
+      fetch('https://matlon.ml/api/tumblr?page=' + page).then(e => {
         e.json().then(e => {
           this.data = e
           let newArr = []
